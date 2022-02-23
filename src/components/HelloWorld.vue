@@ -14,7 +14,7 @@
       >Vue 2 Documentation</a>
     </p>
 
-    <button @click="count++">count is: {{ count }}</button>
+    <button @click="click()">count is: {{ count }}</button>
     <p>
       Edit
       <code>components/HelloWorld.vue</code> to test hot module replacement.
@@ -31,6 +31,11 @@ export default {
     return {
       count: 0,
     };
+  },
+  methods: {
+    click() {
+      this.count++;
+    },
   },
 };
 </script>
