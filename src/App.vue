@@ -1,8 +1,14 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png" />
-    <HelloWorld msg="Hello Vue 2 + Vite" />
-  </div>
+  <v-app>
+    <v-app-bar app></v-app-bar>
+
+    <v-main>
+      <v-container>
+        <img alt="Vue logo" src="./assets/logo.png" />
+        <HelloWorld msg="Hello Vue 2 + Vite" />
+      </v-container>
+    </v-main>
+  </v-app>
 </template>
 
 <script lang="ts">
