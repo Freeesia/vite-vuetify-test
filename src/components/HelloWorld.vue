@@ -1,17 +1,15 @@
 <template>
   <div>
-
     <h1>{{ msg }}</h1>
 
     <p>
-      <a
-        href="https://vitejs.dev/guide/features.html"
-        target="_blank"
-      >Vite Documentation</a> |
-      <a
-        href="https://vuejs.org/v2/guide/"
-        target="_blank"
-      >Vue 2 Documentation</a>
+      <a href="https://vitejs.dev/guide/features.html" target="_blank"
+        >Vite Documentation</a
+      >
+      |
+      <a href="https://vuejs.org/v2/guide/" target="_blank"
+        >Vue 2 Documentation</a
+      >
     </p>
 
     <button @click="click()">count is: {{ count }}</button>
@@ -23,21 +21,20 @@
 </template>
 
 <script lang="ts">
-export default {
-  props: {
-    msg: String,
-  },
-  data() {
-    return {
-      count: 0,
-    };
-  },
-  methods: {
-    click() {
-      this.count++;
-    },
-  },
-};
+import Vue from "vue";
+import Component from "vue-class-component";
+import { Prop } from "vue-property-decorator";
+
+@Component
+export default class HelloWorld extends Vue {
+  @Prop({ type: String })
+  public readonly msg!: string;
+  public count = 0;
+
+  public click() {
+    this.count++;
+  }
+}
 </script>
 
 <style scoped>

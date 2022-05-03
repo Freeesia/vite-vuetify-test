@@ -4,9 +4,17 @@
 		{
 			"type": "npm",
 			"script": "dev",
-			"problemMatcher": [],
 			"label": "npm: dev",
-			"detail": "vite"
+			"detail": "vite",
+			"isBackground": true,
+			"problemMatcher": {
+				"base": "$eslint-stylish",
+				"background": {
+					"activeOnStart": true,
+					"beginsPattern": "^\\s*WAIT\\s+Compiling",
+					"endsPattern": "^\\s+ready in \\d+ms\\.$"
+				}
+			},
 		}
 	]
 }
