@@ -9,7 +9,7 @@
   "dependencies": {
     "vite-plugin-vue2": "2.0.0",
     "vue": "^2.6.12",
-    "vuetify": "^2.6.5"
+    "vuetify": "^2.6.10"
   },
   "devDependencies": {
     "@types/node": "^17.0.31",
